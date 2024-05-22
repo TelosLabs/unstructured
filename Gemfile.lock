@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unstructured (0.1.0)
+    unstructured (0.2.0)
       faraday (~> 2.9.0)
       faraday-multipart (~> 1.0.4)
       marcel (~> 1.0.4)

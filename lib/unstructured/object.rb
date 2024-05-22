@@ -3,7 +3,10 @@
 require "ostruct"
 module Unstructured
   class Object
+    attr_reader :attributes, :raw_data
+
     def initialize(attributes)
+      @raw_data = attributes
       @attributes = OpenStruct.new(attributes)
     end
 
@@ -15,6 +18,10 @@ module Unstructured
 
     def respond_to_missing?(_method, _include_private = false)
       true
+    end
+
+    def to_h
+      @raw_data
     end
   end
 end

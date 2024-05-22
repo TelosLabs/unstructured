@@ -9,7 +9,7 @@ require "unstructured"
 
 client = Unstructured::Client.new(
   server_url: "http://localhost:8000",
-  api_key_auth: ENV["UNSTRUCTURED_API_KEY"]
+  # api_key_auth: ENV["UNSTRUCTURED_API_KEY"]
 )
 
 client.partition("./README.md")

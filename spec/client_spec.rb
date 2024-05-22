@@ -45,5 +45,9 @@ RSpec.describe Unstructured::Client do
       expect(client.partition("spec/fixtures/sample.pdf").first.metadata.filetype).to eq(stub_filetype)
       expect(client.partition("spec/fixtures/sample.pdf").first.metadata.filename).to eq(stub_filename)
     end
+
+    it "should return a hash when using to_h" do
+      expect(client.partition("spec/fixtures/sample.pdf").first.to_h).to be_a(Hash)
+    end
   end
 end
