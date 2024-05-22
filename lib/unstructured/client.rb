@@ -31,8 +31,8 @@ module Unstructured
       ChunkCollection.from_response handle_response(connection.post(
                                                       "/general/v0/general",
                                                       default_params.merge(params).merge({
-                                                                             files: files(file_path)
-                                                                           }),
+                                                                                           files: files(file_path)
+                                                                                         }),
                                                       headers
                                                     ))
     end
