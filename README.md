@@ -14,6 +14,8 @@ If bundler is not being used to manage dependencies, install the gem by executin
 ```
 
 ## Usage
+Find all available params on [Unstructured documentation](https://unstructured-io.github.io/unstructured/apis/api_parameters.html)
+
 ```ruby
 server_url = "https://api.unstructured.io" # "http://localhost:8000" if you are running a docker container
 client = Unstructured::Client.new(server_url: server_url, api_key: ENV["UNSTRUCTURED_API_KEY"])
@@ -28,7 +30,6 @@ params = {
   new_after_n_chars: 1000
 }
 chunks = client.partition(file_path, params)
-
 ```
 
 ## Development
