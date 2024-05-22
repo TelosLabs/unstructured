@@ -18,7 +18,7 @@ Find all available params on [Unstructured documentation](https://unstructured-i
 
 ```ruby
 server_url = "https://api.unstructured.io" # "http://localhost:8000" if you are running a docker container
-client = Unstructured::Client.new(server_url: server_url, api_key: ENV["UNSTRUCTURED_API_KEY"])
+client = Unstructured::Client.new(server_url: server_url, api_key_auth: ENV["UNSTRUCTURED_API_KEY"])
 
 file_path = "./your_document.pdf"
 params = {
